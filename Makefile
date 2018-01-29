@@ -32,9 +32,9 @@ $(PROGRAM):
 
 update: $(PROGRAM)
 	sudo systemctl stop cnl_app.service
-	sudo cp $(OUT_PATH)/$(PROGRAM) /usr/bin
+	sudo cp out/$(PROGRAM) /usr/bin
 	sudo systemctl start cnl_app.service
 
 clean:
-	rm -f $(OUT_PATH)/$(PROGRAM)
+	rm -f $out/$(PROGRAM)
 
