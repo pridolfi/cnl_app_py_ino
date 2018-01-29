@@ -36,5 +36,5 @@ update: $(PROGRAM)
 	sudo systemctl start cnl_app.service
 
 clean:
-	rm -f $out/$(PROGRAM)
+	rm -f out/$(PROGRAM)
 
