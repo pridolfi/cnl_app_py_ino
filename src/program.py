@@ -2,6 +2,10 @@
 
 import wiringpi
 import time
+import sdnotify
+
+n = sdnotify.SystemdNotifier()
+n.notify("READY=1")
 
 wiringpi.wiringPiSetupGpio()
 wiringpi.pinMode(21, 1)
@@ -11,4 +15,5 @@ while True:
     time.sleep(0.2)
     wiringpi.digitalWrite(21, 0)
     time.sleep(0.2)
+    n.notify("WATCHDOG=1")
 
