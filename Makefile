@@ -24,6 +24,9 @@ include /etc/cnl.conf
 
 PROGRAM = cnl_app
 
+ARDUINO_PATH = /home/pi/arduino-1.8.8/
+ARDUINO_PORT = /dev/ttyACM0
+
 all: $(PROGRAM)
 
 $(PROGRAM):
@@ -34,7 +37,7 @@ update: $(PROGRAM)
 	sudo systemctl stop cnl_app.service
 	sudo cp out/$(PROGRAM) /usr/bin
 	sudo systemctl start cnl_app.service
+	$(ARDUINO_PATH)arduino --upload --board arduino:avr:uno --port $(ARDUINO_PORT) ino/cnl_app.ino
 
 clean:
 	rm -f out/$(PROGRAM)
-
