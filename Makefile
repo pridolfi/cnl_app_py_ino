@@ -24,7 +24,7 @@ include /etc/cnl.conf
 
 PROGRAM = cnl_app
 
-ARDUINO_PATH = /home/pi/arduino-1.8.8/
+ARDUINO_PATH = /home/pi/arduino-1.8.9/
 ARDUINO_PORT = /dev/ttyACM0
 
 all: $(PROGRAM)
