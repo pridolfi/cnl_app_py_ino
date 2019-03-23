@@ -4,7 +4,7 @@
 
 void setup() 
 {
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT)
 }
 
 void loop() 
