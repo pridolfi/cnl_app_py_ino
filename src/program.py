@@ -14,5 +14,5 @@ while True:
     wiringpi.digitalWrite(20, 1)
     time.sleep(0.5)
     wiringpi.digitalWrite(20, 0)
-    time.sleep(0.1)
+    time.sleep(0.5)
     n.notify("WATCHDOG=1")
